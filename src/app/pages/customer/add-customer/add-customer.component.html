@@ -1,0 +1,46 @@
+<div class="form-style-2">
+	<div class="form-style-2-heading">Provide Customer Information</div>
+
+	<form [formGroup]="form" novalidate (ngSubmit)="onSubmit()">
+
+		<div>
+			<div>
+				<label><span>Name </span></label>
+				<input class="form-control input-field" formControlName="name"/>
+				<span *ngIf="isSubmitted && f.name.errors" class="">
+					<span *ngIf="f.name.errors.required" class="required">*</span>
+				</span>
+			</div>
+
+			<div>
+				<label> <span>Gender </span></label>
+				<input type="radio" formControlName="gender"value="male" > Male
+				<input type="radio" formControlName="gender"value="female"> Female
+				<span *ngIf="isSubmitted && f.gender.errors" class="">
+					<span *ngIf="f.gender.errors.required" class="required">*</span>
+				</span>
+
+			</div>
+
+			<div>
+				<label> <span>Phone Number </span></label>
+				<input class="form-control input-field" formControlName="phoneNo"/>
+				<span *ngIf="isSubmitted && f.phoneNo.errors" class="required">
+          *
+				</span>
+			</div>
+			<div>
+
+				<label> <span>Address </span></label>
+				<textarea formControlName="address" class="textarea-field"></textarea>
+				<span *ngIf="isSubmitted && f.address.errors" class="">
+					<span *ngIf="f.address.errors.required" class="required">*</span>
+				</span>
+			</div>
+		</div>
+		<label><span> </span><input type="submit" value="Add Customer" [disabled]="isLoading"/></label>
+	</form>
+	<div class="errorMsg">
+		{{errorMsg}}
+	</div>
+	<a [routerLink]="['/']">Back to list</a>

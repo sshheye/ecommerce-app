@@ -1,0 +1,40 @@
+<span *ngIf="isLoading">Loading...</span>
+<div class="form-style-2" *ngIf="!isLoading">
+	<div class="form-style-2-heading"> Customers Info </div>
+
+	<div>
+		<table class="table">
+			<tr>
+				<th>S/N</th>
+				<th>
+					Name
+				</th>
+				<th>
+					Address
+				</th>
+				<th>Gender</th>
+
+				<th>Phone No</th>
+
+			</tr>
+			<tr *ngFor="let customer  of customers;trackBy:identify;index as i">
+				<td>{{i+1}}</td>
+				<td>
+					{{ customer.name }}
+				</td>
+				<td>
+					{{ customer.address }}
+				</td>
+				<td>
+					{{customer.gender}}
+				</td>
+				<td>
+					{{customer.phoneNo}}
+				</td>
+			</tr>
+		</table>
+		<br>
+		<label><span> </span>  <a [routerLink]="['/add-customer']">New Customer</a> </label>
+
+	</div>
+</div>

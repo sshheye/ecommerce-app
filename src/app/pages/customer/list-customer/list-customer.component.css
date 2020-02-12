@@ -1,0 +1,56 @@
+div{
+  font: 13px Arial, Helvetica, sans-serif;
+}
+table {
+  border-collapse: collapse;
+}
+ th {
+  background: #ccc;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background: #efefef;
+}
+
+tr:hover {
+  background: #d1d1d1;
+}
+
+.form-style-2 a,
+.form-style-2 a{
+  text-decoration:none;
+   float: right;
+	border: none;
+	padding: 8px 15px 8px 15px;
+    background: #a2c586;
+	color: #fff;
+	box-shadow: 1px 1px 4px #DADADA;
+	-moz-box-shadow: 1px 1px 4px #DADADA;
+	-webkit-box-shadow: 1px 1px 4px #DADADA;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+.form-style-2 a:hover,
+.form-style-2 a:hover{
+	background: #EA7B00;
+	color: #fff;
+}
+.form-style-2{
+	max-width: 500px;
+	padding: 20px 12px 10px 20px;
+font: 13px Arial, Helvetica, sans-serif;
+}
+.form-style-2-heading{
+	font-weight: bold;
+	font-style: italic;
+	border-bottom: 2px solid #ddd;
+	margin-bottom: 20px;
+	font-size: 15px;
+	padding-bottom: 3px;
+}
